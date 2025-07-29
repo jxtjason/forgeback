@@ -73,7 +73,7 @@ public class TemplateController {
             Files.createDirectories(path.getParent());
             Files.write(path, file.getBytes());
 
-            String url = "http://10.212.110.165:8081/uploads/" + filename; // Replace localhost if needed
+            String url = "http://forgebackend-xssx.onrender.com/uploads/" + filename; // Replace localhost if needed
             return ResponseEntity.ok(url);
         } catch (IOException e) {
             return ResponseEntity.status(500).body("Image upload failed");
